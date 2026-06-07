@@ -1,0 +1,19 @@
+version: 2
+
+sources:
+  - name: nyc_taxi
+    database: nyc_taxi
+    tables:
+      - name: bronze_trips
+        description: "Raw NYC taxi trips loaded into ClickHouse"
+        columns:
+          - name: trip_id
+            tests:
+              - not_null
+              - unique
+          - name: pickup_datetime
+            tests:
+              - not_null
+          - name: dropoff_datetime
+            tests:
+              - not_null

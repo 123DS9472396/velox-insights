@@ -1,0 +1,34 @@
+version: 2
+
+models:
+  - name: stg_bronze_trips
+    description: "Bronze staging view over the raw taxi trips table"
+    columns:
+      - name: trip_id
+        tests:
+          - not_null
+          - unique
+      - name: pickup_datetime
+        tests:
+          - not_null
+      - name: dropoff_datetime
+        tests:
+          - not_null
+
+  - name: int_trips_cleaned
+    description: "Filtered, typed silver trips model"
+    columns:
+      - name: trip_id
+        tests:
+          - not_null
+          - unique
+      - name: pickup_date
+        tests:
+          - not_null
+
+  - name: mart_trips_daily
+    description: "Gold daily trip aggregation"
+    columns:
+      - name: pickup_date
+        tests:
+          - not_null
