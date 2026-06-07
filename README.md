@@ -23,6 +23,14 @@
 
 ---
 
+## 📸 Dashboard Preview
+
+![Velox Insights — NYC Taxi Analytics Dashboard](dashboard_preview.png)
+
+*Real-time KPI cards, daily trip trends, hourly patterns, and payment breakdown — all queried live from ClickHouse Cloud through a dbt-modelled Gold layer.*
+
+
+
 ## 🌐 Live Demo
 
 | Service | URL |
