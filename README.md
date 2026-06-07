@@ -43,34 +43,9 @@
 
 ## 🏗️ Architecture
 
-This project implements a **fully automated, cloud-native data pipeline** — from raw CSV ingestion to an interactive analytics dashboard — using the same architectural patterns adopted by leading real-time analytics companies.
+This project implements a **fully automated, cloud-native data pipeline** — from raw CSV ingestion to an interactive analytics dashboard — using the same architectural patterns adopted by modern real-time analytics companies.
 
-```
-┌──────────────────────────────────────────────────────────────────────┐
-│                         VELOX INSIGHTS PIPELINE                       │
-│                                                                       │
-│  Kaggle CSV       Python ETL      ClickHouse Cloud    dbt Core       │
-│  NYC Taxi  ──►  (clean+load) ──►  MergeTree Engine ──►  Medallion   │
-│  Dataset                          free tier · 1M rows    Transform   │
-│                                                                       │
-│  ┌─────────────────────────────────────────────────────────────────┐ │
-│  │              dbt Medallion Architecture                         │ │
-│  │                                                                 │ │
-│  │  🥉 Bronze Layer      🥈 Silver Layer      🥇 Gold Layer        │ │
-│  │  stg_bronze_trips  →  int_trips_cleaned  →  mart_trips_daily   │ │
-│  │  (raw view)           (cleaned table)       (aggregated KPIs)  │ │
-│  └─────────────────────────────────────────────────────────────────┘ │
-│                              │                                        │
-│                              ▼                                        │
-│                      FastAPI REST API                                 │
-│                   /api/kpis  /api/trips-by-day                       │
-│                   /api/trips-by-hour  /api/payment-breakdown         │
-│                              │                                        │
-│                              ▼                                        │
-│                   React + Recharts Dashboard                          │
-│              KPI Cards │ Line Chart │ Bar Chart │ Date Filters        │
-└──────────────────────────────────────────────────────────────────────┘
-```
+![Velox Insights — System Architecture](architecture_velox.png)
 
 ### Deployment
 
