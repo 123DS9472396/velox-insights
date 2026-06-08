@@ -37,8 +37,13 @@ dist/
 # Datasets
 *.csv
 *.parquet
-*.json
+# Only ignore large data JSON, not config files
 !etl/data/yellow_taxi_sample_clean.csv
+!frontend/vercel.json
+!frontend/package.json
+!frontend/package-lock.json
+!*/package.json
+!*/package-lock.json
 
 # dbt
 dbt_project/target/
