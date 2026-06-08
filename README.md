@@ -35,7 +35,7 @@
 
 | Service | URL |
 |---|---|
-| 📊 React Dashboard | *Deploy to Vercel — coming soon* |
+| 📊 React Dashboard | [velox-insights.vercel.app](https://velox-insights.vercel.app) |
 | ⚡ FastAPI Backend | [velox-insights-nyc-taxi-backend.onrender.com](https://velox-insights-nyc-taxi-backend.onrender.com) |
 | 📖 API Docs (Swagger) | [/docs](https://velox-insights-nyc-taxi-backend.onrender.com/docs) |
 | ❤️ Health Check | [/health](https://velox-insights-nyc-taxi-backend.onrender.com/health) |
