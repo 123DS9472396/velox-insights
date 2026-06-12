@@ -60,9 +60,9 @@ GitHub ──► Vercel (React frontend, global CDN)
 
 ---
 
-## ✨ Why This Stack Is Unique
+## ✨ Enterprise Architecture Design
 
-Most analytics projects use SQLite, a local PostgreSQL, or a mock JSON file. This project is different — it implements the **exact production data engineering pattern** used by modern real-time analytics companies, and here's why each decision matters:
+This project implements the **exact production data engineering pattern** used by modern real-time analytics companies, and here's why each decision matters:
 
 ### 🔥 ClickHouse: Not Just Any Database
 ClickHouse is a **columnar OLAP database** that can query billions of rows in milliseconds. Unlike traditional row-based databases (PostgreSQL, MySQL), ClickHouse is purpose-built for analytics — aggregations, time-series queries, and GROUP BY operations run 100–1000x faster. It is the backbone of several large-scale real-time analytics platforms globally.
